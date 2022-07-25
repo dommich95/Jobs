@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    root :to => 'locations#index'
+    resources :users
+    resources :jobs
+    resources :applies
+    get '/locations/result' => 'locations#results'
+    resources :locations
+
+
+    get '/login' => 'session#new'
+    post '/login' => 'session#create'
+    delete '/login' => 'session#destroy'
 end
+

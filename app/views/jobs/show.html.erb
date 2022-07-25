@@ -1,0 +1,20 @@
+<h1>Job: <%= @job.task %></h1>
+
+<%= image_tag @job.image, :class => 'feature' if @job.image.present? %>
+<ul>
+    <li>Name: <%= @job.task %></li>
+    <li>Location: <%= @job.location %></li>
+    <li>Description: <%= @job.description %></li>
+    <li>Duration: <%= @job.duration %></li>
+    <li>Image: <%= @job.image %></li>
+</ul>
+
+<div class="controls">
+    <% if @current_user == @job.user %>
+    <%= link_to 'Edit job', edit_job_path(@job) %>
+    <%= link_to 'Delete job' , @job, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+    <% end %>
+    <% if @current_user != @job.user %> 
+    <%= link_to 'Apply for the job', new_apply_path %>
+    <% end %>
+</div>

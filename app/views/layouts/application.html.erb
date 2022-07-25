@@ -10,6 +10,23 @@
   </head>
 
   <body>
+  
+  <div class="top">
+    <nav>
+      <%= link_to 'Home', root_path %>
+      
+      <% if @current_user.present?%>
+      <%= link_to "all users", users_path  if @current_user.admin %>
+      <%= link_to 'Post a Job', new_job_path %>
+      <%= link_to 'Job board',jobs_path %>
+      <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+      
+    <% else %>
+    <%= link_to 'Sign up', new_user_path %>
+    <%= link_to 'Sign in',login_path%>
+    <% end %>
+    </nav>
+    </div>
     <%= yield %>
   </body>
 </html>
