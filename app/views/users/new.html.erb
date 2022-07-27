@@ -1,3 +1,4 @@
+<div class="form">
 <h1>Sign up</h1>
 
 <% if @user.errors.any? %>
@@ -10,7 +11,7 @@
 <%= form_for @user do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
-    <%= f.label :family %>
+    <%= f.label :family ,'Surname '%>
     <%= f.text_field :family %>
     <%= f.label :email %>
     <%= f.email_field :email %>
@@ -18,5 +19,6 @@
     <%= f.password_field :password %>
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
-    <%= f.submit "Sign up!" %>
+    <%= f.submit "Sign up!",:class=> 'submit' %>
 <% end %>
+</div>

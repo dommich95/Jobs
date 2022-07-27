@@ -10,6 +10,11 @@ class JobsController < ApplicationController
 
   def create
     job = Job.create job_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      job.image = req["public_id"]
+      job.save
+    end
     @current_user.jobs << job #ownership of job
     redirect_to job
   end
@@ -20,8 +25,17 @@ class JobsController < ApplicationController
 
   def update
     job = Job.find params[:id]
-    job.update job_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      animal.image = req["public_id"]
+    end
+    job.update_attributes(job_params)
+    job.save
     redirect_to job
+  end
+
+  def applicants
+    @job = Job.find params[:id]
   end
 
   def show

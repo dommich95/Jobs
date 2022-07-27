@@ -4,9 +4,10 @@
     <title>Projects</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= cloudinary_js_config %>
   </head>
 
   <body>
@@ -17,9 +18,10 @@
       
       <% if @current_user.present?%>
       <%= link_to "all users", users_path  if @current_user.admin %>
+      <%= link_to 'Job board', locations_result_path%>
       <%= link_to 'Post a Job', new_job_path %>
-      <%= link_to 'Job board',jobs_path %>
       <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+      
       
     <% else %>
     <%= link_to 'Sign up', new_user_path %>

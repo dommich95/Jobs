@@ -1,15 +1,20 @@
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@locations.first.latitude}%2C#{@locations.first.longitude}" %>
-
-<h3>Nearby Jobs</h3>
-<ul>
-<%  @locations.each do |job| %>
-    <%= link_to job_path(job), :class => "jobbox" do %>
-        <div class="jobshow">
-            <h2><%= job.task %></h2>
-            <h3><%= job.location %></h3>
-            <h3></h3><%= job.duration %>
-            <p><%= job.description %></p>
-       </div>  
-    <% end %>
-<% end %>
-</ul>
+<div class="container">
+    <h3>Nearby locations</h3>
+        <%= form_tag locations_result_path, :method => :get do %>
+            <p>
+            <%= text_field_tag :search, params[:search], :placeholder => 'Suburb..         ..[press return' %>
+            
+        <% end %>
+    <ul>    
+        <%  @locations.each do |job| %>
+            <%= link_to job_path(job), :class => "jobbox" do %>
+                <div class="jobshow">
+                    <h2><%= job.task %></h2>
+                    <h3><%= job.location %></h3>
+                    <h3></h3><%= job.duration %>
+                    <p><%= job.description %></p>
+                </div> 
+            <% end %>
+        <% end %>   
+    </ul>
+</div>

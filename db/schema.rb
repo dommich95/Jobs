@@ -25,8 +25,10 @@ ActiveRecord::Schema.define(version: 2022_07_24_063903) do
   create_table "applies", force: :cascade do |t|
     t.text "name"
     t.text "family"
+    t.text "email"
     t.text "description"
     t.integer "user_id"
+    t.integer "job_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,7 +1,12 @@
 /* #ALL---------------- */
+*{
+    box-sizing: border-box;
+}
+
 .container{
     width: 960px;
-    height: 900px;
+    min-height: 900px;
+    padding: 10px;
     margin: 0 auto;
     background-color: rgb(217, 187 ,187);
     text-align: center;
@@ -58,11 +63,11 @@ nav {
 
 .fields{
     margin: 30px auto;
-    max-width: 42vw;
+    max-width: 27vw;
     min-width: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
+    grid-column-gap: 100px;
     height: 200px;
     text-transform: uppercase;
 }
@@ -93,13 +98,11 @@ nav {
 .jobshow{
     border: 3px solid black;
     text-align: center;
-    border-radius: 100px;
+    border-radius: 10px;
     margin: 2em;
     text-decoration: none;
 }
-.feature{
-    max-height: 30em;
-}
+
 h1{
     font-size: 300%; 
 }
@@ -122,6 +125,7 @@ form input{
     margin-top: 1px;
     height:400px;
     width: 350px;
+    font-size: 150%;
 }
 
 .submit{
@@ -129,4 +133,93 @@ form input{
     padding: 5px;
     font-size: 150%;
     width: 350px;
+}
+.newjob{
+    width: 960px;
+    margin: 0 auto;
+    background-color: #8ec9c5 ;
+    text-align: center;
+}
+
+
+ul{
+    list-style-type: none;
+   
+}
+
+.button {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 350px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #d2d2e4;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.job{
+    width: 960px;
+    padding: 10px;
+    height: 900px;
+    margin: 0 auto;
+    background-color: rgb(217, 187 ,187);
+}
+
+ li{
+    margin-right: 5px;
+    
+}
+.maps{
+    margin-top: 48px;
+    margin-right: 40px;
+    height: 16em;
+    float: right;
+    width: 384px;
+}
+
+.feature{
+    max-height: 20em;
+    margin: 0 160px;
+}
+.joblist{
+    float: left;
+    margin-top: 56px;
+}
+.controls{
+    text-align: center;
+    padding: 343px;
+}
+.job h1{
+    text-align: center;
+}
+.form{
+    width: 960px;
+    height: 900px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #949776;
+    text-align: center;
+}
+
+.find {
+    float: right;
+}
+
+.delete, .edit, .applies, .apply{
+    padding: 4px;
+    font-size: 200%;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #bbbbbb;
+    margin-top: 47px;
+}
+.owner{
+    margin-top: 350px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.applicants{
+    border: 5px solid black;
+    margin: 10px;
 }

@@ -1,0 +1,10 @@
+<h1>Applicants for <%= @job.task %></h1>
+
+<% @job.applies.each do |applicant| %>
+<div class="applicants">
+    <li>Name: <%= applicant.name %></li>
+    <li>Family: <%= applicant.family %></li>
+    <li>Email: <%= applicant.email %></li>
+    <li>About Applicant: <%= applicant.description %></li>
+    </div>
+<% end %>
