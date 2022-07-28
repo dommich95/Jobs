@@ -164,6 +164,7 @@ ul{
     height: 900px;
     margin: 0 auto;
     background-color: rgb(217, 187 ,187);
+    text-align: center;
 }
 
  li{
@@ -179,12 +180,14 @@ ul{
 }
 
 .feature{
-    max-height: 20em;
+    height: 20em;
     margin: 0 160px;
 }
 .joblist{
     float: left;
     margin-top: 56px;
+    width: 450px;
+    
 }
 .controls{
     text-align: center;
@@ -207,7 +210,7 @@ ul{
 }
 
 .delete, .edit, .applies, .apply{
-    padding: 4px;
+    padding: 8px;
     font-size: 200%;
     border: 3px solid black;
     border-radius: 10px;
@@ -220,6 +223,9 @@ ul{
     justify-content: space-evenly;
 }
 .applicants{
-    border: 5px solid black;
+    border: 1px solid black;
+    border-radius: 10px;
     margin: 10px;
+    list-style-type: none;
+    padding: 10px;
 }
