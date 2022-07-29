@@ -109,16 +109,16 @@ APIs:
 ![](/app/assets/images/jobindex.png)
 
 ### Job Show
-![](/app/assets/images/jobshow.png)
+![](/app/assets/images/jobShow.png)
 
 ### Create a Job add
-![](/app/assets/images/createjob.png)
+![](/app/assets/images/createJob.png)
 
 ### Job Applicants 
 ![](/app/assets/images/applicants.png)
 
 ### Sign Up
-![](/app/assets/images/signUp.png)
+![](/app/assets/images/SignUp.png)
 
 ### Login
 ![](/app/assets/images/LogIn.png)
