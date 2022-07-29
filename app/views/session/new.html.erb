@@ -1,9 +1,9 @@
-<div class="form">
+<div class="form"><%# Sign in page %>
     <h1>Log In</h1>
-    <% if flash[:error].present? %>
+    <% if flash[:error].present? %> <%# check sif deatils were correct %>
     <% end%>
 
-    <%= form_tag login_path do %>
+    <%= form_tag login_path do %><%# which deatils are required for log in %>
         <%= label_tag :email %>
         <%= email_field_tag :email %>
         <%= label_tag :password %>
@@ -11,3 +11,4 @@
         <%= submit_tag "Sign in", :class => 'submit' %>
     <% end %>
 </div>
+

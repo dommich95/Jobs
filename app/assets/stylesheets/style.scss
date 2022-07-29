@@ -11,6 +11,15 @@
     background-color: rgb(217, 187 ,187);
     text-align: center;
 }
+
+h1{
+    font-size: 300%; 
+}
+
+ul{
+    list-style-type: none;
+   
+}
 /* #--------------------- */
 /* #NAV---------- */
 .top{
@@ -95,6 +104,10 @@ nav {
     box-shadow: 10px 10px 10px rgb(236, 236, 236);
 }
 
+// Homepage end
+
+
+// Job index page 
 .jobshow{
     border: 3px solid black;
     text-align: center;
@@ -102,25 +115,28 @@ nav {
     margin: 2em;
     text-decoration: none;
 }
-
-h1{
-    font-size: 300%; 
+// Job show
+.feature{
+    height: 20em;
+    margin: 0 160px;
 }
+
 label{
     display: block;
     font-size: 150%;
 }
+
+.joblist{
+    float: left;
+    margin-top: 56px;
+    width: 450px;
+}
+
 .description{
     background-color: red;
 }
 
-form input{
-    padding: 5px;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-    width: 250px;
-}
+
 .box{
     margin-top: 1px;
     height:400px;
@@ -128,23 +144,12 @@ form input{
     font-size: 150%;
 }
 
-.submit{
-    margin-top: 20px;
-    padding: 5px;
-    font-size: 150%;
-    width: 350px;
-}
+// Add a job
 .newjob{
     width: 960px;
     margin: 0 auto;
     background-color: #8ec9c5 ;
     text-align: center;
-}
-
-
-ul{
-    list-style-type: none;
-   
 }
 
 .button {
@@ -167,7 +172,7 @@ ul{
     text-align: center;
 }
 
- li{
+li{
     margin-right: 5px;
     
 }
@@ -177,25 +182,11 @@ ul{
     height: 16em;
     float: right;
     width: 384px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.feature{
-    height: 20em;
-    margin: 0 160px;
-}
-.joblist{
-    float: left;
-    margin-top: 56px;
-    width: 450px;
-    
-}
-.controls{
-    text-align: center;
-    padding: 343px;
-}
-.job h1{
-    text-align: center;
-}
+
+// form
 .form{
     width: 960px;
     height: 900px;
@@ -205,9 +196,19 @@ ul{
     text-align: center;
 }
 
+form input{
+    padding: 5px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+}
+
 .find {
     float: right;
 }
+
+// Buttons
 
 .delete, .edit, .applies, .apply{
     padding: 8px;
@@ -217,15 +218,24 @@ ul{
     background-color: #bbbbbb;
     margin-top: 47px;
 }
+
 .owner{
     margin-top: 350px;
     text-align: center;
     justify-content: space-evenly;
 }
+
 .applicants{
     border: 1px solid black;
     border-radius: 10px;
     margin: 10px;
     list-style-type: none;
     padding: 10px;
+}
+
+.submit{
+    margin-top: 20px;
+    padding: 5px;
+    font-size: 150%;
+    width: 350px;
 }

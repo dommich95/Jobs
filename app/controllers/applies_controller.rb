@@ -3,7 +3,7 @@ class AppliesController < ApplicationController
     @apply= Apply.new
   end
 
-  def create
+  def create# create a job, give it an ID (more for the applicants show page)
     @job = Job.find params[:id]
     apply = Apply.create apply_params 
     @job.applies << apply
@@ -13,7 +13,7 @@ class AppliesController < ApplicationController
   def show
   end
 
-  def apply_params
+  def apply_params #only those params can be used
     params.require(:apply).permit(:name, :family, :email, :description )
   end
 end

@@ -1,9 +1,5 @@
 class JobsController < ApplicationController
   before_action :check_for_login
-  def index
-    @jobs = Job.all
-  end
-
   def new
     @job = Job.new
   end

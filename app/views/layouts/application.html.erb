@@ -4,7 +4,6 @@
     <title>Projects</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= cloudinary_js_config %>
@@ -12,22 +11,20 @@
 
   <body>
   
-  <div class="top">
-    <nav>
-      <%= link_to 'Home', root_path %>
-      
-      <% if @current_user.present?%>
-      <%= link_to "all users", users_path  if @current_user.admin %>
-      <%= link_to 'Job board', locations_result_path%>
-      <%= link_to 'Post a Job', new_job_path %>
-      <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
-      
-      
-    <% else %>
-    <%= link_to 'Sign up', new_user_path %>
-    <%= link_to 'Sign in',login_path%>
-    <% end %>
-    </nav>
+    <div class="top">
+      <nav>
+        <%= link_to 'Home', root_path %>
+        
+        <% if @current_user.present?%> <%# User can only acces the platform if logged in %>
+          <%= link_to "all users", users_path  if @current_user.admin %> <%# shows all users for the admin only %>
+          <%= link_to 'Job board', locations_result_path%> <%# path way to the job index %>
+          <%= link_to 'Post a Job', new_job_path %> <%# path way to post a job %>
+          <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %> <%# gives the user the option to logout %>
+        <% else %>
+          <%= link_to 'Sign up', new_user_path %> <%# path to create an account %>
+          <%= link_to 'Sign in',login_path%> <%# path to sign in with excisting account %>
+        <% end %>
+      </nav>
     </div>
     <%= yield %>
   </body>

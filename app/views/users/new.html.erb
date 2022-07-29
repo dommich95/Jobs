@@ -1,9 +1,9 @@
-<div class="form">
+<div class="form"><%# Create a new user %>
 <h1>Sign up</h1>
 
-<% if @user.errors.any? %>
+<% if @user.errors.any? %> 
     <ol>
-        <% @user.errors.full_messages.each do |msg| %>
+        <% @user.errors.full_messages.each do |msg| %> <%# if any deatils were incorrect for the sign up for example the password, an error message will appear %> 
             <li><%= msg %></li>
         <% end %>
     </ol>
@@ -17,7 +17,7 @@
     <%= f.email_field :email %>
     <%= f.label :password %>
     <%= f.password_field :password %>
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation %> <%# checks for passowrd match<%#  %> %>
     <%= f.password_field :password_confirmation %>
     <%= f.submit "Sign up!",:class=> 'submit' %>
 <% end %>

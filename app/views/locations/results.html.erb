@@ -1,12 +1,11 @@
 <div class="container">
     <h3>Nearby locations</h3>
-        <%= form_tag locations_result_path, :method => :get do %>
+        <%= form_tag locations_result_path, :method => :get do %><%# Find jobs after locations %>
             <p>
-            <%= text_field_tag :search, params[:search], :placeholder => 'Suburb..         ..[press return' %>
-            
+            <%= text_field_tag :search, params[:search], :placeholder => 'Suburb..         ..[press return' %> <%# after typing the search just  press enter to see results %>
         <% end %>
     <ul>    
-        <%  @locations.each do |job| %>
+        <%  @locations.each do |job| %> <%# Loop through each job in its own box wit all deatils %>
             <%= link_to job_path(job), :class => "jobbox" do %>
                 <div class="jobshow">
                     <h2><%= job.task %></h2>

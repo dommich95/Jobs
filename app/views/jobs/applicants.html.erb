@@ -1,6 +1,6 @@
 <h1>Applicants for <%= @job.task %></h1>
 
-<% @job.applies.each do |applicant| %>
+<% @job.applies.each do |applicant| %><%# Show's all applicants for a single job %>
 <div class="applicants">
     <li>Name: <%= applicant.name %></li>
     <li>Family: <%= applicant.family %></li>

@@ -1,13 +1,13 @@
-<div class="container">
-    <h1>Apply for this role</h1>
+<div class="container"><%# Apply for a job %>
+    <h1>Apply for this role</h1> 
     <%= form_for @apply, :url => job_apply_path(params[:id]) do |f| %>
-        <%= f.label :name  , :requried => true %>
+        <%= f.label :name  , :requried => true %><%# makes sure name has to be given %>
         <%= f.text_field :name  %>
-        <%= f.label :family ,'Surname' ,:requried => true %>
+        <%= f.label :family ,'Surname' ,:requried => true %><%# makes sure a surname is supplied %>
         <%= f.text_field :family %>
-        <%= f.label :email %>
+        <%= f.label :email ,:requried => true%> <%# email has to be supplied  %>
         <%= f.email_field :email %>
-        <%= f.label :description ,'Tell us more about you' %>
+        <%= f.label :description ,'Tell us more about you' %> 
         <%= f.text_area :description , :class => "box"%>
         <%= f.submit 'Apply now' %> 
     <% end %>

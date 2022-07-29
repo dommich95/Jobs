@@ -1,19 +1,20 @@
 
-<div class="home">
-  <div class="home-page">
+<div class="home"><%# Homepage%>
+  <div class="home-page"> <%# head of the home page %>
     <h1>Find a Job in your area</h1>
    </div>
 
 
-  <div class="fields">  
+  <div class="fields">  <%# clickable box to jobboard %>
     <%= link_to locations_result_path do %>
       <div class="find-job">
       </div>
     <% end %>
 
-    <%= link_to new_job_path do %>
+    <%= link_to new_job_path do %> <%# clickable box to Post a job %>
       <div class="post-job">
         <h2>Post a Job</h2>
       </div>
     <% end %>
 </div>
+ 
